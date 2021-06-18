@@ -1,0 +1,316 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://assets/animais/urso.png" type="Texture" id=1]
+[ext_resource path="res://assets/animais/Cavalo2.png" type="Texture" id=2]
+[ext_resource path="res://assets/animais/raposa.png" type="Texture" id=3]
+[ext_resource path="res://Voltar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Pontuacao.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Layout_Nivel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://enc_N.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/videos/Raposa.ogv" type="VideoStream" id=8]
+[ext_resource path="res://assets/videos/Cavalo.ogv" type="VideoStream" id=9]
+[ext_resource path="res://VideoPlayer3.gd" type="Script" id=10]
+[ext_resource path="res://VideoPlayer2.gd" type="Script" id=11]
+[ext_resource path="res://assets/voltar solto.png" type="Texture" id=12]
+[ext_resource path="res://assets/voltar pressionado.png" type="Texture" id=13]
+[ext_resource path="res://assets/KiriFont.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://BotaoPlay.tscn" type="PackedScene" id=15]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 4
+font_data = ExtResource( 14 )
+
+[sub_resource type="VideoStreamTheora" id=2]
+file = "res://assets/videos/Urso.ogv"
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends VideoPlayer
+
+func _on_BotaoPlay_pressed():
+	play()
+"
+
+[node name="Fase4_Imagem" type="Node"]
+
+[node name="Layout_Nivel" parent="." instance=ExtResource( 6 )]
+
+[node name="Node_Cavalo" type="Node" parent="."]
+
+[node name="A" parent="Node_Cavalo" instance=ExtResource( 7 )]
+position = Vector2( 706.893, 68.0832 )
+scale = Vector2( 0.29, 0.29 )
+text_input = "C"
+
+[node name="A2" parent="Node_Cavalo" instance=ExtResource( 7 )]
+position = Vector2( 706.893, 123.893 )
+scale = Vector2( 0.29, 0.29 )
+text_input = "A"
+
+[node name="A3" parent="Node_Cavalo" instance=ExtResource( 7 )]
+position = Vector2( 706.893, 180.383 )
+scale = Vector2( 0.29, 0.29 )
+text_input = "V"
+
+[node name="A4" parent="Node_Cavalo" instance=ExtResource( 7 )]
+position = Vector2( 706.893, 236.713 )
+scale = Vector2( 0.29, 0.29 )
+text_input = "A"
+
+[node name="A5" parent="Node_Cavalo" instance=ExtResource( 7 )]
+position = Vector2( 706.893, 291.67 )
+scale = Vector2( 0.29, 0.29 )
+text_input = "L"
+
+[node name="A6" parent="Node_Cavalo" instance=ExtResource( 7 )]
+position = Vector2( 706.893, 347.886 )
+scale = Vector2( 0.29, 0.29 )
+text_input = "O"
+
+[node name="Node_Raposa" type="Node" parent="."]
+
+[node name="Raposa" parent="Node_Raposa" instance=ExtResource( 7 )]
+position = Vector2( 428.281, 124.255 )
+scale = Vector2( 0.29, 0.29 )
+text_input = "R"
+
+[node name="Raposa2" parent="Node_Raposa" instance=ExtResource( 7 )]
+position = Vector2( 484.19, 124.255 )
+scale = Vector2( 0.29, 0.29 )
+text_input = "A"
+
+[node name="Raposa3" parent="Node_Raposa" instance=ExtResource( 7 )]
+position = Vector2( 539.771, 124.254 )
+scale = Vector2( 0.29, 0.29 )
+text_input = "P"
+
+[node name="Raposa4" parent="Node_Raposa" instance=ExtResource( 7 )]
+position = Vector2( 595.191, 124.266 )
+scale = Vector2( 0.29, 0.29 )
+text_input = "O"
+
+[node name="Raposa5" parent="Node_Raposa" instance=ExtResource( 7 )]
+position = Vector2( 650.667, 124.006 )
+scale = Vector2( 0.29, 0.29 )
+text_input = "S"
+
+[node name="Node_Urso" type="Node" parent="."]
+
+[node name="Urso" parent="Node_Urso" instance=ExtResource( 7 )]
+position = Vector2( 428.414, 68.5391 )
+scale = Vector2( 0.29, 0.29 )
+text_input = "U"
+
+[node name="Urso2" parent="Node_Urso" instance=ExtResource( 7 )]
+position = Vector2( 428.414, 180.199 )
+scale = Vector2( 0.29, 0.29 )
+text_input = "S"
+
+[node name="Urso3" parent="Node_Urso" instance=ExtResource( 7 )]
+position = Vector2( 428.414, 236.529 )
+scale = Vector2( 0.29, 0.29 )
+text_input = "O"
+
+[node name="Voltar" parent="." instance=ExtResource( 4 )]
+onde_voltar = "res://Selecao_Fases.tscn"
+
+[node name="TextureButton" parent="." instance=ExtResource( 5 )]
+
+[node name="Fase4" type="TextureButton" parent="."]
+modulate = Color( 1, 0.980392, 0.705882, 1 )
+margin_left = 10.0
+margin_top = 310.0
+margin_right = 125.0
+margin_bottom = 425.0
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Fase4"]
+margin_left = 12.0
+margin_top = 31.0
+margin_right = 99.0
+margin_bottom = 99.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.94902, 0.631373, 0.219608, 1 )
+custom_colors/font_outline_modulate = Color( 0.592157, 0.27451, 0.0156863, 1 )
+text = "4"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Urso" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Urso"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 226.0
+margin_top = 83.0
+margin_right = 378.0
+margin_bottom = 219.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect4" type="ColorRect" parent="Urso"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 187.0
+margin_top = 219.0
+margin_right = 354.0
+margin_bottom = 385.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="Urso"]
+margin_left = 223.461
+margin_top = 69.3922
+margin_right = 371.461
+margin_bottom = 217.392
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer" type="VideoPlayer" parent="Urso"]
+margin_left = 194.348
+margin_top = 226.0
+margin_right = 346.348
+margin_bottom = 378.0
+stream = SubResource( 2 )
+volume_db = -80.0
+script = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoPlay" parent="Urso" instance=ExtResource( 15 )]
+margin_left = 233.34
+margin_top = 377.212
+margin_right = 307.34
+margin_bottom = 446.212
+
+[node name="Raposa" type="Node" parent="."]
+
+[node name="ColorRect3" type="ColorRect" parent="Raposa"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 547.0
+margin_top = 157.0
+margin_right = 671.0
+margin_bottom = 283.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Raposa"]
+margin_left = 541.161
+margin_top = 158.231
+margin_right = 666.161
+margin_bottom = 283.231
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect6" type="ColorRect" parent="Raposa"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 439.623
+margin_top = 282.736
+margin_right = 606.623
+margin_bottom = 448.736
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer3" type="VideoPlayer" parent="Raposa"]
+margin_left = 446.972
+margin_top = 288.736
+margin_right = 598.972
+margin_bottom = 440.736
+stream = ExtResource( 8 )
+volume_db = -80.0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoPlay2" parent="Raposa" instance=ExtResource( 15 )]
+margin_left = 600.824
+margin_top = 379.006
+margin_right = 674.824
+margin_bottom = 448.006
+
+[node name="Cavalo" type="Node" parent="."]
+
+[node name="ColorRect2" type="ColorRect" parent="Cavalo"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 745.0
+margin_top = 34.0
+margin_right = 866.0
+margin_bottom = 157.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Cavalo"]
+margin_left = 748.427
+margin_top = 38.3717
+margin_right = 863.427
+margin_bottom = 153.372
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect5" type="ColorRect" parent="Cavalo"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 785.463
+margin_top = 157.264
+margin_right = 952.463
+margin_bottom = 323.264
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer2" type="VideoPlayer" parent="Cavalo"]
+margin_left = 792.811
+margin_top = 165.264
+margin_right = 944.811
+margin_bottom = 317.264
+stream = ExtResource( 9 )
+volume_db = -80.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoPlay3" parent="Cavalo" instance=ExtResource( 15 )]
+margin_left = 832.346
+margin_top = 317.891
+margin_right = 906.346
+margin_bottom = 386.891
+[connection signal="ponto_conquistado" from="Node_Cavalo/A" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Node_Cavalo/A2" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Node_Cavalo/A3" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Node_Cavalo/A4" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Node_Cavalo/A5" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Node_Cavalo/A6" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Node_Raposa/Raposa" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Node_Raposa/Raposa2" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Node_Raposa/Raposa3" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Node_Raposa/Raposa4" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Node_Raposa/Raposa5" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Node_Urso/Urso" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Node_Urso/Urso2" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Node_Urso/Urso3" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="pressed" from="Urso/BotaoPlay" to="Urso/VideoPlayer" method="_on_BotaoPlay_pressed"]
+[connection signal="pressed" from="Raposa/BotaoPlay2" to="Raposa/VideoPlayer3" method="_on_BotaoPlay_pressed"]
+[connection signal="pressed" from="Cavalo/BotaoPlay3" to="Cavalo/VideoPlayer2" method="_on_BotaoPlay_pressed"]

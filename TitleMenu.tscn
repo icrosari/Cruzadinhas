@@ -1,0 +1,200 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/KiriFont.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/copiadetelainicial.png" type="Texture" id=2]
+[ext_resource path="res://assets/placa1 solta.png" type="Texture" id=3]
+[ext_resource path="res://assets/Sniglet-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/placa1 pressionada.png" type="Texture" id=5]
+[ext_resource path="res://PlayButton.gd" type="Script" id=6]
+[ext_resource path="res://Creditos.gd" type="Script" id=7]
+[ext_resource path="res://Sair.gd" type="Script" id=8]
+[ext_resource path="res://assets/seta_play2.png" type="Texture" id=9]
+[ext_resource path="res://assets/menu.png" type="Texture" id=10]
+[ext_resource path="res://assets/sair.png" type="Texture" id=11]
+[ext_resource path="res://assets/Sons/zapsplat_cartoon_pop_mouth_011_46674.ogg" type="AudioStream" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+outline_size = 4
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 62
+outline_size = 6
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 62
+outline_size = 6
+font_data = ExtResource( 4 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = -20.7112
+margin_top = 3.36359
+margin_right = 1038.29
+margin_bottom = 599.364
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1.0
+margin_top = 39.0
+margin_right = 1022.0
+margin_bottom = 214.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0509804, 0.34902, 0.25098, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+text = "Cruzadinha
+dos animais"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="TextureButton" parent="."]
+margin_left = 264.732
+margin_top = 227.143
+margin_right = 744.732
+margin_bottom = 323.143
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PlayButton"]
+margin_left = 3.0
+margin_top = 5.0
+margin_right = 430.0
+margin_bottom = 91.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.94902, 0.631373, 0.219608, 1 )
+custom_colors/font_outline_modulate = Color( 0.592157, 0.27451, 0.0156863, 1 )
+custom_colors/font_color_shadow = Color( 0.619608, 0.333333, 0, 1 )
+text = "JOGAR"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="PlayButton"]
+margin_left = 336.268
+margin_top = 17.6129
+margin_right = 397.268
+margin_bottom = 78.6129
+texture = ExtResource( 9 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SomBotao" type="AudioStreamPlayer" parent="PlayButton"]
+stream = ExtResource( 12 )
+volume_db = -15.0
+
+[node name="Creditos" type="TextureButton" parent="."]
+margin_left = 264.732
+margin_top = 342.765
+margin_right = 744.732
+margin_bottom = 438.765
+action_mode = 0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Creditos"]
+margin_top = 10.0
+margin_right = 395.0
+margin_bottom = 93.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.94902, 0.631373, 0.219608, 1 )
+custom_colors/font_outline_modulate = Color( 0.592157, 0.27451, 0.0156863, 1 )
+custom_colors/font_color_shadow = Color( 0.619608, 0.333333, 0, 1 )
+text = "CRÉDITOS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Creditos"]
+margin_left = 349.0
+margin_top = 15.0
+margin_right = 422.0
+margin_bottom = 88.0
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SomBotao1" type="AudioStreamPlayer" parent="Creditos"]
+stream = ExtResource( 12 )
+volume_db = -15.0
+
+[node name="Sair" type="TextureButton" parent="."]
+margin_left = 264.732
+margin_top = 458.135
+margin_right = 744.732
+margin_bottom = 554.135
+action_mode = 0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="Sair"]
+margin_left = 296.0
+margin_top = 11.0
+margin_right = 364.0
+margin_bottom = 79.0
+texture = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sair"]
+margin_right = 403.0
+margin_bottom = 91.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.94902, 0.631373, 0.219608, 1 )
+custom_colors/font_outline_modulate = Color( 0.592157, 0.27451, 0.0156863, 1 )
+custom_colors/font_color_shadow = Color( 0.619608, 0.333333, 0, 1 )
+text = " SAIR"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SomBotao2" type="AudioStreamPlayer" parent="Sair"]
+stream = ExtResource( 12 )
+volume_db = -15.0
+[connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_PlayButton_pressed"]
+[connection signal="finished" from="PlayButton/SomBotao" to="PlayButton" method="_on_SomBotao_finished"]
+[connection signal="pressed" from="Creditos" to="Creditos" method="_on_Crditos_pressed"]
+[connection signal="finished" from="Creditos/SomBotao1" to="Creditos" method="_on_SomBotao1_finished"]
+[connection signal="pressed" from="Sair" to="Sair" method="_on_Sair_pressed"]
+[connection signal="finished" from="Sair/SomBotao2" to="Sair" method="_on_SomBotao2_finished"]

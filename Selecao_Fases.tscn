@@ -1,0 +1,291 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://assets/copiadetelainicial.png" type="Texture" id=1]
+[ext_resource path="res://assets/Placa2.png" type="Texture" id=2]
+[ext_resource path="res://assets/placa1 solta.png" type="Texture" id=3]
+[ext_resource path="res://assets/KiriFont.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Fase6.gd" type="Script" id=5]
+[ext_resource path="res://Voltar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/voltar pressionado.png" type="Texture" id=7]
+[ext_resource path="res://assets/voltar solto.png" type="Texture" id=8]
+[ext_resource path="res://Fase1.gd" type="Script" id=9]
+[ext_resource path="res://Fase2.gd" type="Script" id=10]
+[ext_resource path="res://Fase3.gd" type="Script" id=11]
+[ext_resource path="res://Fase4.gd" type="Script" id=12]
+[ext_resource path="res://Fase5.gd" type="Script" id=13]
+[ext_resource path="res://assets/Sons/zapsplat_cartoon_pop_mouth_011_46674.ogg" type="AudioStream" id=14]
+
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 4
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+outline_size = 4
+font_data = ExtResource( 4 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -425.789, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -20.182
+margin_top = 3.364
+margin_right = 1038.82
+margin_bottom = 599.364
+texture = ExtResource( 1 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+margin_left = 295.0
+margin_top = 11.0
+margin_right = 716.0
+margin_bottom = 108.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureRect3"]
+margin_left = -303.0
+margin_top = -5.0
+margin_right = 721.0
+margin_bottom = 108.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.94902, 0.631373, 0.219608, 1 )
+custom_colors/font_outline_modulate = Color( 0.592157, 0.27451, 0.0156863, 1 )
+text = "Fases"
+align = 1
+valign = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 124.65
+margin_top = 107.063
+margin_right = 889.65
+margin_bottom = 573.063
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" parent="." instance=ExtResource( 6 )]
+onde_voltar = "res://TitleMenu.tscn"
+
+[node name="Fase1" type="TextureButton" parent="."]
+modulate = Color( 1, 0.980392, 0.705882, 1 )
+margin_left = 246.551
+margin_top = 176.692
+margin_right = 396.551
+margin_bottom = 326.692
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 7 )
+expand = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label1" type="Label" parent="Fase1"]
+margin_left = 12.0
+margin_top = 31.0
+margin_right = 137.0
+margin_bottom = 114.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.94902, 0.631373, 0.219608, 1 )
+custom_colors/font_outline_modulate = Color( 0.592157, 0.27451, 0.0156863, 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="som1" type="AudioStreamPlayer" parent="Fase1"]
+stream = ExtResource( 14 )
+volume_db = -15.0
+
+[node name="Fase2" type="TextureButton" parent="."]
+modulate = Color( 1, 0.980392, 0.705882, 1 )
+margin_left = 430.087
+margin_top = 174.0
+margin_right = 580.087
+margin_bottom = 324.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 7 )
+expand = true
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Fase2"]
+margin_left = 12.0
+margin_top = 31.0
+margin_right = 138.0
+margin_bottom = 115.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.94902, 0.631373, 0.219608, 1 )
+custom_colors/font_outline_modulate = Color( 0.592157, 0.27451, 0.0156863, 1 )
+text = "2"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="som2" type="AudioStreamPlayer" parent="Fase2"]
+stream = ExtResource( 14 )
+volume_db = -15.0
+
+[node name="Fase3" type="TextureButton" parent="."]
+modulate = Color( 1, 0.980392, 0.705882, 1 )
+margin_left = 620.688
+margin_top = 174.0
+margin_right = 770.688
+margin_bottom = 324.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 7 )
+expand = true
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Fase3"]
+margin_left = 12.0
+margin_top = 31.0
+margin_right = 137.0
+margin_bottom = 116.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.94902, 0.631373, 0.219608, 1 )
+custom_colors/font_outline_modulate = Color( 0.592157, 0.27451, 0.0156863, 1 )
+text = "3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="som3" type="AudioStreamPlayer" parent="Fase3"]
+stream = ExtResource( 14 )
+volume_db = -15.0
+
+[node name="Fase4" type="TextureButton" parent="."]
+modulate = Color( 1, 0.980392, 0.705882, 1 )
+margin_left = 246.0
+margin_top = 354.426
+margin_right = 396.0
+margin_bottom = 504.426
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 7 )
+expand = true
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Fase4"]
+margin_left = 12.4781
+margin_top = 30.6104
+margin_right = 128.478
+margin_bottom = 111.61
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.94902, 0.631373, 0.219608, 1 )
+custom_colors/font_outline_modulate = Color( 0.592157, 0.27451, 0.0156863, 1 )
+text = "4"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="som4" type="AudioStreamPlayer" parent="Fase4"]
+stream = ExtResource( 14 )
+volume_db = -15.0
+
+[node name="Fase5" type="TextureButton" parent="."]
+modulate = Color( 1, 0.980392, 0.705882, 1 )
+margin_left = 430.0
+margin_top = 354.152
+margin_right = 580.0
+margin_bottom = 504.152
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 7 )
+expand = true
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Fase5"]
+margin_left = 12.0
+margin_top = 31.0
+margin_right = 137.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.94902, 0.631373, 0.219608, 1 )
+custom_colors/font_outline_modulate = Color( 0.592157, 0.27451, 0.0156863, 1 )
+text = "5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="som5" type="AudioStreamPlayer" parent="Fase5"]
+stream = ExtResource( 14 )
+volume_db = -15.0
+
+[node name="Fase6" type="TextureButton" parent="."]
+modulate = Color( 1, 0.980392, 0.705882, 1 )
+margin_left = 620.0
+margin_top = 354.0
+margin_right = 770.0
+margin_bottom = 504.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 7 )
+expand = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="Fase6"]
+margin_left = 12.0
+margin_top = 31.0
+margin_right = 138.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.94902, 0.631373, 0.219608, 1 )
+custom_colors/font_outline_modulate = Color( 0.592157, 0.27451, 0.0156863, 1 )
+text = "6"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="som6" type="AudioStreamPlayer" parent="Fase6"]
+stream = ExtResource( 14 )
+volume_db = -15.0
+[connection signal="pressed" from="Fase1" to="Fase1" method="_on_Fase1_pressed"]
+[connection signal="pressed" from="Fase2" to="Fase2" method="_on_Fase2_pressed"]
+[connection signal="pressed" from="Fase3" to="Fase3" method="_on_Fase3_pressed"]
+[connection signal="pressed" from="Fase4" to="Fase4" method="_on_Fase4_pressed"]
+[connection signal="pressed" from="Fase5" to="Fase5" method="_on_Fase5_pressed"]
+[connection signal="pressed" from="Fase6" to="Fase6" method="_on_Fase6_pressed"]

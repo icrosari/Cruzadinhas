@@ -1,0 +1,314 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://enc_N.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Voltar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Layout_Nivel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Pontuacao.tscn" type="PackedScene" id=4]
+[ext_resource path="res://VideoPlayer.gd" type="Script" id=5]
+[ext_resource path="res://V2.gd" type="Script" id=6]
+[ext_resource path="res://V1.gd" type="Script" id=7]
+[ext_resource path="res://assets/animais/macaco.png" type="Texture" id=8]
+[ext_resource path="res://assets/animais/pavao.png" type="Texture" id=9]
+[ext_resource path="res://assets/animais/Tartaruga.png" type="Texture" id=10]
+[ext_resource path="res://assets/videos/Pavao.ogv" type="VideoStream" id=11]
+[ext_resource path="res://assets/videos/Tartaruga.ogv" type="VideoStream" id=12]
+[ext_resource path="res://assets/videos/Macaco.ogv" type="VideoStream" id=13]
+[ext_resource path="res://BotaoPlay.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/voltar solto.png" type="Texture" id=15]
+[ext_resource path="res://assets/voltar pressionado.png" type="Texture" id=16]
+[ext_resource path="res://assets/KiriFont.ttf" type="DynamicFontData" id=17]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 4
+font_data = ExtResource( 17 )
+
+[node name="Node" type="Node"]
+
+[node name="Layout_Nivel" parent="." instance=ExtResource( 3 )]
+
+[node name="Voltar" parent="." instance=ExtResource( 2 )]
+onde_voltar = "res://Selecao_Fases.tscn"
+
+[node name="Macaco" type="Node" parent="."]
+
+[node name="Macaco" parent="Macaco" instance=ExtResource( 1 )]
+position = Vector2( 501.341, 381.439 )
+text_input = "M"
+
+[node name="Macaco2" parent="Macaco" instance=ExtResource( 1 )]
+position = Vector2( 560.558, 381.439 )
+text_input = "A"
+
+[node name="Macaco3" parent="Macaco" instance=ExtResource( 1 )]
+position = Vector2( 620.034, 381.439 )
+text_input = "C"
+
+[node name="Macaco4" parent="Macaco" instance=ExtResource( 1 )]
+position = Vector2( 679.25, 381.439 )
+text_input = "A"
+
+[node name="Macaco5" parent="Macaco" instance=ExtResource( 1 )]
+position = Vector2( 738.466, 381.439 )
+text_input = "C"
+
+[node name="Pavao2" type="Node" parent="."]
+
+[node name="N" parent="Pavao2" instance=ExtResource( 1 )]
+position = Vector2( 795.462, 146.793 )
+text_input = "P"
+
+[node name="N2" parent="Pavao2" instance=ExtResource( 1 )]
+position = Vector2( 796.704, 264.772 )
+text_input = "V"
+
+[node name="N3" parent="Pavao2" instance=ExtResource( 1 )]
+position = Vector2( 796.704, 322.768 )
+text_input = "Ã"
+
+[node name="N4" parent="Pavao2" instance=ExtResource( 1 )]
+position = Vector2( 796.704, 381.764 )
+text_input = "O"
+
+[node name="Tartaruga" type="Node" parent="."]
+
+[node name="N" parent="Tartaruga" instance=ExtResource( 1 )]
+position = Vector2( 330.478, 205.828 )
+text_input = "T"
+
+[node name="N2" parent="Tartaruga" instance=ExtResource( 1 )]
+position = Vector2( 388.461, 205.828 )
+text_input = "A"
+
+[node name="N3" parent="Tartaruga" instance=ExtResource( 1 )]
+position = Vector2( 446.343, 205.828 )
+text_input = "R"
+
+[node name="N4" parent="Tartaruga" instance=ExtResource( 1 )]
+position = Vector2( 504.841, 205.828 )
+text_input = "T"
+
+[node name="N5" parent="Tartaruga" instance=ExtResource( 1 )]
+position = Vector2( 562.723, 205.828 )
+text_input = "A"
+
+[node name="N6" parent="Tartaruga" instance=ExtResource( 1 )]
+position = Vector2( 621.635, 205.828 )
+text_input = "R"
+
+[node name="N7" parent="Tartaruga" instance=ExtResource( 1 )]
+position = Vector2( 679.517, 205.828 )
+text_input = "U"
+
+[node name="N8" parent="Tartaruga" instance=ExtResource( 1 )]
+position = Vector2( 738.014, 205.828 )
+text_input = "G"
+
+[node name="N9" parent="Tartaruga" instance=ExtResource( 1 )]
+position = Vector2( 795.897, 205.828 )
+text_input = "A"
+
+[node name="TextureButton" parent="." instance=ExtResource( 4 )]
+
+[node name="Tartaruga2" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Tartaruga2"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 162.0
+margin_top = 107.0
+margin_right = 298.0
+margin_bottom = 243.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer" type="VideoPlayer" parent="Tartaruga2"]
+margin_left = 167.0
+margin_top = 113.0
+margin_right = 293.0
+margin_bottom = 239.0
+stream = ExtResource( 12 )
+volume_db = -80.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Tartaruga2"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 297.974
+margin_top = 46.0972
+margin_right = 414.974
+margin_bottom = 163.097
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Tartaruga2"]
+margin_left = 301.0
+margin_top = 49.0
+margin_right = 412.0
+margin_bottom = 160.0
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoPlay" parent="Tartaruga2" instance=ExtResource( 14 )]
+margin_left = 415.875
+margin_top = 93.2063
+margin_right = 489.875
+margin_bottom = 162.206
+
+[node name="Macaco2" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Macaco2"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 184.627
+margin_top = 296.505
+margin_right = 320.627
+margin_bottom = 432.505
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="V2" type="VideoPlayer" parent="Macaco2"]
+margin_left = 189.627
+margin_top = 302.505
+margin_right = 315.627
+margin_bottom = 428.505
+stream = ExtResource( 13 )
+volume_db = -80.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Macaco2"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 320.697
+margin_top = 315.709
+margin_right = 437.697
+margin_bottom = 432.709
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Macaco2"]
+margin_left = 323.723
+margin_top = 318.612
+margin_right = 434.723
+margin_bottom = 429.612
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoPlay2" parent="Macaco2" instance=ExtResource( 14 )]
+margin_left = 321.121
+margin_top = 247.177
+margin_right = 395.121
+margin_bottom = 316.177
+
+[node name="Pavao" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Pavao"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 829.509
+margin_top = 56.0883
+margin_right = 965.509
+margin_bottom = 192.088
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="V1" type="VideoPlayer" parent="Pavao"]
+margin_left = 834.509
+margin_top = 62.0883
+margin_right = 960.509
+margin_bottom = 188.088
+stream = ExtResource( 11 )
+volume_db = -80.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Pavao"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 829.987
+margin_top = 192.277
+margin_right = 946.987
+margin_bottom = 309.277
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Pavao"]
+margin_left = 833.014
+margin_top = 195.18
+margin_right = 944.014
+margin_bottom = 306.18
+texture = ExtResource( 9 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoPlay3" parent="Pavao" instance=ExtResource( 14 )]
+margin_left = 852.41
+margin_top = 309.472
+margin_right = 926.41
+margin_bottom = 378.472
+
+[node name="Fase6" type="TextureButton" parent="."]
+modulate = Color( 1, 0.980392, 0.705882, 1 )
+margin_left = 10.0
+margin_top = 310.0
+margin_right = 125.0
+margin_bottom = 425.0
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="Fase6"]
+margin_left = 12.0
+margin_top = 31.0
+margin_right = 102.0
+margin_bottom = 97.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.94902, 0.631373, 0.219608, 1 )
+custom_colors/font_outline_modulate = Color( 0.592157, 0.27451, 0.0156863, 1 )
+text = "6"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="ponto_conquistado" from="Macaco/Macaco" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Macaco/Macaco2" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Macaco/Macaco3" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Macaco/Macaco4" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Macaco/Macaco5" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Pavao2/N" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Pavao2/N2" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Pavao2/N3" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Pavao2/N4" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Tartaruga/N" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Tartaruga/N2" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Tartaruga/N3" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Tartaruga/N4" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Tartaruga/N5" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Tartaruga/N6" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Tartaruga/N7" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Tartaruga/N8" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Tartaruga/N9" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="pressed" from="Tartaruga2/BotaoPlay" to="Tartaruga2/VideoPlayer" method="_on_BotaoPlay_pressed"]
+[connection signal="pressed" from="Macaco2/BotaoPlay2" to="Macaco2/V2" method="_on_BotaoPlay_pressed"]
+[connection signal="pressed" from="Pavao/BotaoPlay3" to="Pavao/V1" method="_on_BotaoPlay_pressed"]

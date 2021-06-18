@@ -1,0 +1,225 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Voltar.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Pontuacao.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Layout_Nivel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://BotaoPlay.tscn" type="PackedScene" id=4]
+[ext_resource path="res://enc_N.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/animais/baleia.png" type="Texture" id=6]
+[ext_resource path="res://assets/animais/pinguim.png" type="Texture" id=7]
+[ext_resource path="res://vidbaleia.gd" type="Script" id=8]
+[ext_resource path="res://vidpinguim.gd" type="Script" id=9]
+[ext_resource path="res://assets/videos/Pinguim2.ogv" type="VideoStream" id=10]
+[ext_resource path="res://assets/videos/Baleia1.ogv" type="VideoStream" id=11]
+[ext_resource path="res://assets/voltar solto.png" type="Texture" id=12]
+[ext_resource path="res://assets/voltar pressionado.png" type="Texture" id=13]
+[ext_resource path="res://assets/KiriFont.ttf" type="DynamicFontData" id=14]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 4
+font_data = ExtResource( 14 )
+
+[node name="Fase2" type="Node"]
+
+[node name="Layout_Nivel" parent="." instance=ExtResource( 3 )]
+
+[node name="Voltar" parent="." instance=ExtResource( 1 )]
+onde_voltar = "res://Selecao_Fases.tscn"
+
+[node name="TextureButton" parent="." instance=ExtResource( 2 )]
+
+[node name="Quadros_Encaixe" type="Node" parent="."]
+
+[node name="Baleia" type="Node" parent="Quadros_Encaixe"]
+
+[node name="B1" parent="Quadros_Encaixe/Baleia" instance=ExtResource( 5 )]
+position = Vector2( 523.484, 110.73 )
+text_input = "B"
+
+[node name="B2" parent="Quadros_Encaixe/Baleia" instance=ExtResource( 5 )]
+position = Vector2( 523.484, 166.289 )
+text_input = "A"
+
+[node name="B3" parent="Quadros_Encaixe/Baleia" instance=ExtResource( 5 )]
+position = Vector2( 523.484, 225.023 )
+text_input = "L"
+
+[node name="B4" parent="Quadros_Encaixe/Baleia" instance=ExtResource( 5 )]
+position = Vector2( 523.484, 282.17 )
+text_input = "E"
+
+[node name="B5P2" parent="Quadros_Encaixe/Baleia" instance=ExtResource( 5 )]
+position = Vector2( 522.501, 340.588 )
+text_input = "I"
+
+[node name="B6" parent="Quadros_Encaixe/Baleia" instance=ExtResource( 5 )]
+position = Vector2( 523.484, 399.637 )
+text_input = "A"
+
+[node name="Pinguim" type="Node" parent="Quadros_Encaixe"]
+
+[node name="P1" parent="Quadros_Encaixe/Pinguim" instance=ExtResource( 5 )]
+position = Vector2( 462.748, 340.903 )
+text_input = "P"
+
+[node name="P3" parent="Quadros_Encaixe/Pinguim" instance=ExtResource( 5 )]
+position = Vector2( 582.308, 341.071 )
+
+[node name="P4" parent="Quadros_Encaixe/Pinguim" instance=ExtResource( 5 )]
+position = Vector2( 641.108, 340.904 )
+text_input = "G"
+
+[node name="P5" parent="Quadros_Encaixe/Pinguim" instance=ExtResource( 5 )]
+position = Vector2( 700.575, 340.904 )
+text_input = "U"
+
+[node name="P6" parent="Quadros_Encaixe/Pinguim" instance=ExtResource( 5 )]
+position = Vector2( 759.166, 340.904 )
+text_input = "I"
+
+[node name="P7" parent="Quadros_Encaixe/Pinguim" instance=ExtResource( 5 )]
+position = Vector2( 817.929, 340.449 )
+text_input = "M"
+
+[node name="fundoVidPinguim" type="ColorRect" parent="."]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 227.933
+margin_top = 146.97
+margin_right = 346.933
+margin_bottom = 323.97
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vidpinguim" type="VideoPlayer" parent="fundoVidPinguim"]
+margin_left = 7.49152
+margin_top = 9.73898
+margin_right = 112.492
+margin_bottom = 169.739
+stream = ExtResource( 10 )
+volume_db = -80.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoPlay" parent="fundoVidPinguim" instance=ExtResource( 4 )]
+margin_left = 24.0
+margin_top = 170.0
+margin_right = 98.0
+margin_bottom = 239.0
+
+[node name="fundoVidBaleia" type="ColorRect" parent="."]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 652.441
+margin_top = 45.0
+margin_right = 770.441
+margin_bottom = 217.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vidbaleia" type="VideoPlayer" parent="fundoVidBaleia"]
+margin_left = 6.74237
+margin_top = 5.24408
+margin_right = 111.742
+margin_bottom = 165.244
+stream = ExtResource( 11 )
+volume_db = -80.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoPlay2" parent="fundoVidBaleia" instance=ExtResource( 4 )]
+margin_left = 22.6127
+margin_top = 166.462
+margin_right = 96.6127
+margin_bottom = 235.462
+
+[node name="fundoPinguim" type="ColorRect" parent="."]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 326.713
+margin_top = 323.862
+margin_right = 429.713
+margin_bottom = 420.862
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="textping" type="TextureRect" parent="fundoPinguim"]
+margin_right = 103.0
+margin_bottom = 97.0
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fundoBaleia" type="ColorRect" parent="."]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 557.441
+margin_top = 45.0
+margin_right = 652.441
+margin_bottom = 137.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="textbaleia" type="TextureRect" parent="fundoBaleia"]
+margin_top = -8.0
+margin_right = 94.0
+margin_bottom = 102.0
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fase2" type="TextureButton" parent="."]
+modulate = Color( 1, 0.980392, 0.705882, 1 )
+margin_left = 10.0
+margin_top = 310.0
+margin_right = 125.0
+margin_bottom = 425.0
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Fase2"]
+margin_left = 12.0
+margin_top = 30.3326
+margin_right = 105.0
+margin_bottom = 98.3326
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.94902, 0.631373, 0.219608, 1 )
+custom_colors/font_outline_modulate = Color( 0.592157, 0.27451, 0.0156863, 1 )
+text = "2"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Baleia/B1" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Baleia/B2" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Baleia/B3" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Baleia/B4" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Baleia/B5P2" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Baleia/B6" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Pinguim/P1" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Pinguim/P3" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Pinguim/P4" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Pinguim/P5" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Pinguim/P6" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Pinguim/P7" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="pressed" from="fundoVidPinguim/BotaoPlay" to="fundoVidPinguim/vidpinguim" method="_on_BotaoPlay_pressed"]
+[connection signal="pressed" from="fundoVidBaleia/BotaoPlay2" to="fundoVidBaleia/vidbaleia" method="_on_BotaoPlay_pressed"]

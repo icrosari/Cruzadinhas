@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/zapsplat_cartoon_pop_mouth_011_46674.ogg-0a04a0671bc10876a3870c5190d54736.oggstr"
+
+[deps]
+
+source_file="res://assets/Sons/zapsplat_cartoon_pop_mouth_011_46674.ogg"
+dest_files=[ "res://.import/zapsplat_cartoon_pop_mouth_011_46674.ogg-0a04a0671bc10876a3870c5190d54736.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

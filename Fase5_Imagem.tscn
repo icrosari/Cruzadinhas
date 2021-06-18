@@ -1,0 +1,312 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Voltar.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Layout_Nivel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://enc_N.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Pontuacao.tscn" type="PackedScene" id=4]
+[ext_resource path="res://VideoPlayer.gd" type="Script" id=5]
+[ext_resource path="res://assets/videos/Camelo.ogv" type="VideoStream" id=6]
+[ext_resource path="res://assets/videos/Avestruz.ogv" type="VideoStream" id=7]
+[ext_resource path="res://assets/videos/Leao.ogv" type="VideoStream" id=8]
+[ext_resource path="res://VideoPlayer3.gd" type="Script" id=9]
+[ext_resource path="res://VideoPlayer2.gd" type="Script" id=10]
+[ext_resource path="res://assets/animais/leao.png" type="Texture" id=11]
+[ext_resource path="res://assets/animais/camelo.png" type="Texture" id=12]
+[ext_resource path="res://assets/animais/avestruz.png" type="Texture" id=13]
+[ext_resource path="res://BotaoPlay.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/voltar solto.png" type="Texture" id=15]
+[ext_resource path="res://assets/KiriFont.ttf" type="DynamicFontData" id=17]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 4
+font_data = ExtResource( 17 )
+
+[node name="Node" type="Node"]
+
+[node name="Layout_Nivel" parent="." instance=ExtResource( 2 )]
+
+[node name="TextureButton" parent="." instance=ExtResource( 4 )]
+
+[node name="Avestruz" type="Node" parent="."]
+
+[node name="Avestruz" parent="Avestruz" instance=ExtResource( 3 )]
+position = Vector2( 387.744, 167.676 )
+scale = Vector2( 0.28, 0.28 )
+text_input = "A"
+
+[node name="Avestruz2" parent="Avestruz" instance=ExtResource( 3 )]
+position = Vector2( 442.141, 168.676 )
+scale = Vector2( 0.28, 0.28 )
+text_input = "V"
+
+[node name="Avestruz3" parent="Avestruz" instance=ExtResource( 3 )]
+position = Vector2( 496.233, 168.676 )
+scale = Vector2( 0.28, 0.28 )
+text_input = "E"
+
+[node name="Avestruz4" parent="Avestruz" instance=ExtResource( 3 )]
+position = Vector2( 550.63, 168.676 )
+scale = Vector2( 0.28, 0.28 )
+text_input = "S"
+
+[node name="Avestruz5" parent="Avestruz" instance=ExtResource( 3 )]
+position = Vector2( 604.723, 168.676 )
+scale = Vector2( 0.28, 0.28 )
+text_input = "T"
+
+[node name="Avestruz6" parent="Avestruz" instance=ExtResource( 3 )]
+position = Vector2( 659.12, 168.676 )
+scale = Vector2( 0.28, 0.28 )
+text_input = "R"
+
+[node name="Avestruz7" parent="Avestruz" instance=ExtResource( 3 )]
+position = Vector2( 713.212, 168.676 )
+scale = Vector2( 0.28, 0.28 )
+text_input = "U"
+
+[node name="Avestruz8" parent="Avestruz" instance=ExtResource( 3 )]
+position = Vector2( 767.609, 168.676 )
+scale = Vector2( 0.28, 0.28 )
+text_input = "Z"
+
+[node name="ColorRect" type="ColorRect" parent="Avestruz"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 799.0
+margin_top = 46.0
+margin_right = 944.0
+margin_bottom = 191.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer" type="VideoPlayer" parent="Avestruz"]
+margin_left = 804.0
+margin_top = 51.0
+margin_right = 940.0
+margin_bottom = 187.0
+stream = ExtResource( 7 )
+volume_db = -80.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect4" type="ColorRect" parent="Avestruz"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 845.0
+margin_top = 191.0
+margin_right = 956.0
+margin_bottom = 299.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Avestruz"]
+margin_left = 851.0
+margin_top = 195.0
+margin_right = 951.0
+margin_bottom = 295.0
+texture = ExtResource( 13 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoPlay2" parent="Avestruz" instance=ExtResource( 14 )]
+margin_left = 768.879
+margin_top = 208.253
+margin_right = 842.879
+margin_bottom = 277.253
+
+[node name="Camelo" type="Node" parent="."]
+
+[node name="N" parent="Camelo" instance=ExtResource( 3 )]
+position = Vector2( 388.055, 116.495 )
+scale = Vector2( 0.28, 0.28 )
+text_input = "C"
+
+[node name="N2" parent="Camelo" instance=ExtResource( 3 )]
+position = Vector2( 388.055, 221.495 )
+scale = Vector2( 0.28, 0.28 )
+text_input = "M"
+
+[node name="N3" parent="Camelo" instance=ExtResource( 3 )]
+position = Vector2( 388.055, 275.495 )
+scale = Vector2( 0.28, 0.28 )
+text_input = "E"
+
+[node name="N4" parent="Camelo" instance=ExtResource( 3 )]
+position = Vector2( 388.055, 329.495 )
+scale = Vector2( 0.28, 0.28 )
+text_input = "L"
+
+[node name="N5" parent="Camelo" instance=ExtResource( 3 )]
+position = Vector2( 388.055, 384.892 )
+scale = Vector2( 0.28, 0.28 )
+text_input = "O"
+
+[node name="ColorRect3" type="ColorRect" parent="Camelo"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 204.0
+margin_top = 66.0
+margin_right = 348.0
+margin_bottom = 210.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer3" type="VideoPlayer" parent="Camelo"]
+margin_left = 209.0
+margin_top = 70.0
+margin_right = 344.0
+margin_bottom = 205.0
+stream = ExtResource( 6 )
+volume_db = -80.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect6" type="ColorRect" parent="Camelo"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 237.34
+margin_top = 209.761
+margin_right = 348.34
+margin_bottom = 317.761
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="Camelo"]
+margin_left = 243.34
+margin_top = 213.761
+margin_right = 343.34
+margin_bottom = 313.761
+texture = ExtResource( 12 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoPlay2" parent="Camelo" instance=ExtResource( 14 )]
+margin_left = 256.159
+margin_top = 318.451
+margin_right = 330.159
+margin_bottom = 387.451
+
+[node name="LEÃO" type="Node" parent="."]
+
+[node name="N" parent="LEÃO" instance=ExtResource( 3 )]
+position = Vector2( 442.636, 330.132 )
+scale = Vector2( 0.28, 0.28 )
+text_input = "E"
+
+[node name="N2" parent="LEÃO" instance=ExtResource( 3 )]
+position = Vector2( 497.326, 330.073 )
+scale = Vector2( 0.28, 0.28 )
+text_input = "Ã"
+
+[node name="N3" parent="LEÃO" instance=ExtResource( 3 )]
+position = Vector2( 551.017, 330.073 )
+scale = Vector2( 0.28, 0.28 )
+text_input = "O"
+
+[node name="ColorRect2" type="ColorRect" parent="LEÃO"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 579.0
+margin_top = 292.0
+margin_right = 718.0
+margin_bottom = 431.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer2" type="VideoPlayer" parent="LEÃO"]
+margin_left = 583.0
+margin_top = 297.0
+margin_right = 714.0
+margin_bottom = 428.0
+stream = ExtResource( 8 )
+volume_db = -80.0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect5" type="ColorRect" parent="LEÃO"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 717.979
+margin_top = 322.589
+margin_right = 828.979
+margin_bottom = 430.589
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="LEÃO"]
+margin_left = 723.979
+margin_top = 326.589
+margin_right = 823.979
+margin_bottom = 426.589
+texture = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoPlay" parent="LEÃO" instance=ExtResource( 14 )]
+margin_left = 830.129
+margin_top = 361.829
+margin_right = 904.129
+margin_bottom = 430.829
+
+[node name="Voltar" parent="." instance=ExtResource( 1 )]
+onde_voltar = "res://Selecao_Fases.tscn"
+
+[node name="Fase5" type="TextureButton" parent="."]
+modulate = Color( 1, 0.980392, 0.705882, 1 )
+margin_left = 10.0
+margin_top = 310.0
+margin_right = 125.0
+margin_bottom = 425.0
+texture_normal = ExtResource( 15 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Fase5"]
+margin_left = 12.0
+margin_top = 31.0
+margin_right = 106.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.94902, 0.631373, 0.219608, 1 )
+custom_colors/font_outline_modulate = Color( 0.592157, 0.27451, 0.0156863, 1 )
+text = "5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="ponto_conquistado" from="Avestruz/Avestruz" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Avestruz/Avestruz2" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Avestruz/Avestruz3" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Avestruz/Avestruz4" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Avestruz/Avestruz5" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Avestruz/Avestruz6" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Avestruz/Avestruz7" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Avestruz/Avestruz8" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="pressed" from="Avestruz/BotaoPlay2" to="Avestruz/VideoPlayer" method="_on_BotaoPlay_pressed"]
+[connection signal="ponto_conquistado" from="Camelo/N" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Camelo/N2" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Camelo/N3" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Camelo/N4" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Camelo/N5" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="pressed" from="Camelo/BotaoPlay2" to="Camelo/VideoPlayer3" method="_on_BotaoPlay_pressed"]
+[connection signal="ponto_conquistado" from="LEÃO/N" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="LEÃO/N2" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="LEÃO/N3" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="pressed" from="LEÃO/BotaoPlay" to="LEÃO/VideoPlayer2" method="_on_BotaoPlay_pressed"]

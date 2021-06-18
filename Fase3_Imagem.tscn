@@ -1,0 +1,309 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://assets/videos/Gato.ogv" type="VideoStream" id=1]
+[ext_resource path="res://vidgato.gd" type="Script" id=2]
+[ext_resource path="res://assets/voltar solto.png" type="Texture" id=3]
+[ext_resource path="res://Layout_Nivel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Voltar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Pontuacao.tscn" type="PackedScene" id=6]
+[ext_resource path="res://enc_N.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/videos/Cachorro.ogv" type="VideoStream" id=8]
+[ext_resource path="res://assets/videos/Coelho.ogv" type="VideoStream" id=9]
+[ext_resource path="res://assets/animais/cachorro.png" type="Texture" id=10]
+[ext_resource path="res://assets/animais/coelho.png" type="Texture" id=11]
+[ext_resource path="res://assets/animais/gato.png" type="Texture" id=12]
+[ext_resource path="res://assets/voltar pressionado.png" type="Texture" id=13]
+[ext_resource path="res://assets/KiriFont.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://BotaoPlay.tscn" type="PackedScene" id=15]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 4
+font_data = ExtResource( 14 )
+
+[node name="Fase3" type="Node"]
+
+[node name="Layout_Nivel" parent="." instance=ExtResource( 4 )]
+
+[node name="fundovidgato" type="ColorRect" parent="Layout_Nivel"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 469.501
+margin_top = 47.1551
+margin_right = 587.501
+margin_bottom = 219.155
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vidgato" type="VideoPlayer" parent="Layout_Nivel/fundovidgato"]
+margin_left = 7.34161
+margin_top = 5.33936
+margin_right = 112.342
+margin_bottom = 165.339
+stream = ExtResource( 1 )
+volume_db = -80.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoPlay" parent="Layout_Nivel/fundovidgato" instance=ExtResource( 15 )]
+margin_left = 23.2427
+margin_top = 164.887
+margin_right = 97.2427
+margin_bottom = 233.887
+
+[node name="fundovidcachorro" type="ColorRect" parent="Layout_Nivel"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 210.117
+margin_top = 167.957
+margin_right = 325.117
+margin_bottom = 339.957
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vidcachorro" type="VideoPlayer" parent="Layout_Nivel/fundovidcachorro"]
+margin_left = 5.21594
+margin_top = 6.52498
+margin_right = 110.216
+margin_bottom = 166.525
+stream = ExtResource( 8 )
+volume_db = -80.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoPlay2" parent="Layout_Nivel/fundovidcachorro" instance=ExtResource( 15 )]
+margin_left = 19.6769
+margin_top = 167.198
+margin_right = 93.6769
+margin_bottom = 236.198
+
+[node name="fundovidcoelho" type="ColorRect" parent="Layout_Nivel"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 801.279
+margin_top = 110.622
+margin_right = 916.279
+margin_bottom = 282.622
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vidcoelho" type="VideoPlayer" parent="Layout_Nivel/fundovidcoelho"]
+margin_left = 5.19525
+margin_top = 6.58432
+margin_right = 110.195
+margin_bottom = 166.584
+stream = ExtResource( 9 )
+volume_db = -80.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoPlay3" parent="Layout_Nivel/fundovidcoelho" instance=ExtResource( 15 )]
+margin_left = 20.8934
+margin_top = 167.02
+margin_right = 94.8934
+margin_bottom = 236.02
+
+[node name="fundotextgato" type="ColorRect" parent="Layout_Nivel"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 399.928
+margin_top = 149.359
+margin_right = 469.928
+margin_bottom = 219.359
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="textgato" type="TextureRect" parent="Layout_Nivel/fundotextgato"]
+margin_top = -2.0
+margin_right = 70.0
+margin_bottom = 67.0
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fundotextcachorro" type="ColorRect" parent="Layout_Nivel"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 304.53
+margin_top = 339.898
+margin_right = 374.53
+margin_bottom = 409.898
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cachor" type="TextureRect" parent="Layout_Nivel/fundotextcachorro"]
+margin_right = 71.0
+margin_bottom = 69.0
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fundotextcoelho" type="ColorRect" parent="Layout_Nivel"]
+self_modulate = Color( 1, 1, 1, 0.568627 )
+margin_left = 750.697
+margin_top = 41.2551
+margin_right = 820.697
+margin_bottom = 111.255
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coelho" type="TextureRect" parent="Layout_Nivel/fundotextcoelho"]
+margin_right = 71.0
+margin_bottom = 69.0
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 6
+
+[node name="Voltar" parent="." instance=ExtResource( 5 )]
+onde_voltar = "res://Selecao_Fases.tscn"
+
+[node name="TextureButton" parent="." instance=ExtResource( 6 )]
+
+[node name="Quadros_Encaixe" type="Node" parent="."]
+
+[node name="Coelho" type="Node" parent="Quadros_Encaixe"]
+
+[node name="C1" parent="Quadros_Encaixe/Coelho" instance=ExtResource( 7 )]
+position = Vector2( 721.122, 65.0681 )
+scale = Vector2( 0.25, 0.25 )
+text_input = "C"
+
+[node name="C3" parent="Quadros_Encaixe/Coelho" instance=ExtResource( 7 )]
+position = Vector2( 721.122, 162.82 )
+scale = Vector2( 0.25, 0.25 )
+text_input = "E"
+
+[node name="C4" parent="Quadros_Encaixe/Coelho" instance=ExtResource( 7 )]
+position = Vector2( 721.059, 211.649 )
+scale = Vector2( 0.25, 0.25 )
+text_input = "L"
+
+[node name="C5" parent="Quadros_Encaixe/Coelho" instance=ExtResource( 7 )]
+position = Vector2( 720.79, 260.955 )
+scale = Vector2( 0.25, 0.25 )
+text_input = "H"
+
+[node name="C6" parent="Quadros_Encaixe/Coelho" instance=ExtResource( 7 )]
+position = Vector2( 720.725, 310.451 )
+scale = Vector2( 0.25, 0.25 )
+text_input = "O"
+
+[node name="Cachorro" type="Node" parent="Quadros_Encaixe"]
+
+[node name="CA1" parent="Quadros_Encaixe/Cachorro" instance=ExtResource( 7 )]
+position = Vector2( 373.704, 311.239 )
+scale = Vector2( 0.25, 0.25 )
+text_input = "C"
+
+[node name="CA3" parent="Quadros_Encaixe/Cachorro" instance=ExtResource( 7 )]
+position = Vector2( 472.257, 311.326 )
+scale = Vector2( 0.25, 0.25 )
+text_input = "C"
+
+[node name="CA4" parent="Quadros_Encaixe/Cachorro" instance=ExtResource( 7 )]
+position = Vector2( 521.646, 311.326 )
+scale = Vector2( 0.25, 0.25 )
+text_input = "H"
+
+[node name="CA5" parent="Quadros_Encaixe/Cachorro" instance=ExtResource( 7 )]
+position = Vector2( 571.127, 311.494 )
+scale = Vector2( 0.25, 0.25 )
+text_input = "O"
+
+[node name="CA6" parent="Quadros_Encaixe/Cachorro" instance=ExtResource( 7 )]
+position = Vector2( 620.583, 311.327 )
+scale = Vector2( 0.25, 0.25 )
+text_input = "R"
+
+[node name="CA7" parent="Quadros_Encaixe/Cachorro" instance=ExtResource( 7 )]
+position = Vector2( 670.669, 310.905 )
+scale = Vector2( 0.25, 0.25 )
+text_input = "R"
+
+[node name="CA8C2" parent="Quadros_Encaixe/Cachorro" instance=ExtResource( 7 )]
+position = Vector2( 720.842, 113.64 )
+scale = Vector2( 0.25, 0.25 )
+text_input = "O"
+
+[node name="Gato" type="Node" parent="Quadros_Encaixe"]
+
+[node name="G1" parent="Quadros_Encaixe/Gato" instance=ExtResource( 7 )]
+position = Vector2( 422.987, 262.223 )
+scale = Vector2( 0.25, 0.25 )
+text_input = "G"
+
+[node name="G2CA2" parent="Quadros_Encaixe/Gato" instance=ExtResource( 7 )]
+position = Vector2( 423.384, 311.035 )
+scale = Vector2( 0.25, 0.25 )
+text_input = "A"
+
+[node name="G3" parent="Quadros_Encaixe/Gato" instance=ExtResource( 7 )]
+position = Vector2( 423.384, 359.451 )
+scale = Vector2( 0.25, 0.25 )
+text_input = "T"
+
+[node name="G4" parent="Quadros_Encaixe/Gato" instance=ExtResource( 7 )]
+position = Vector2( 423.781, 408.661 )
+scale = Vector2( 0.25, 0.25 )
+text_input = "O"
+
+[node name="Fase3" type="TextureButton" parent="."]
+modulate = Color( 1, 0.980392, 0.705882, 1 )
+margin_left = 10.0
+margin_top = 310.0
+margin_right = 125.0
+margin_bottom = 425.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 13 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Fase3"]
+margin_left = 12.0
+margin_top = 31.0
+margin_right = 106.0
+margin_bottom = 97.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.94902, 0.631373, 0.219608, 1 )
+custom_colors/font_outline_modulate = Color( 0.592157, 0.27451, 0.0156863, 1 )
+text = "3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Layout_Nivel/fundovidgato/BotaoPlay" to="Layout_Nivel/fundovidgato/vidgato" method="_on_BotaoPlay_pressed"]
+[connection signal="pressed" from="Layout_Nivel/fundovidcachorro/BotaoPlay2" to="Layout_Nivel/fundovidcachorro/vidcachorro" method="_on_BotaoPlay_pressed"]
+[connection signal="pressed" from="Layout_Nivel/fundovidcoelho/BotaoPlay3" to="Layout_Nivel/fundovidcoelho/vidcoelho" method="_on_BotaoPlay_pressed"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Coelho/C1" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Coelho/C3" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Coelho/C4" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Coelho/C5" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Coelho/C6" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Cachorro/CA1" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Cachorro/CA3" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Cachorro/CA4" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Cachorro/CA5" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Cachorro/CA6" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Cachorro/CA7" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Cachorro/CA8C2" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Gato/G1" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Gato/G2CA2" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Gato/G3" to="TextureButton" method="_on_A_ponto_conquistado"]
+[connection signal="ponto_conquistado" from="Quadros_Encaixe/Gato/G4" to="TextureButton" method="_on_A_ponto_conquistado"]

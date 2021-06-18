@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/acertou.ogg-e6fc491701760f99abd838957b611333.oggstr"
+
+[deps]
+
+source_file="res://assets/Sons/acertou.ogg"
+dest_files=[ "res://.import/acertou.ogg-e6fc491701760f99abd838957b611333.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

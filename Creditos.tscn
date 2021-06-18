@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/copiadetelainicial.png" type="Texture" id=1]
+[ext_resource path="res://assets/KiriFont.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/Sniglet-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Voltar.tscn" type="PackedScene" id=5]
+
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+outline_size = 4
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.0745098, 0.305882, 0.176471, 0.705882 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -20.0
+margin_top = 3.0
+margin_right = 1039.0
+margin_bottom = 599.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = -7.0
+margin_top = 15.0
+margin_right = 1019.0
+margin_bottom = 163.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0509804, 0.34902, 0.25098, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+text = "Créditos"
+align = 1
+valign = 1
+
+[node name="ColorRect2" type="Panel" parent="."]
+margin_left = 28.9438
+margin_top = 136.776
+margin_right = 998.944
+margin_bottom = 588.776
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect2"]
+margin_left = 2.0
+margin_top = 7.0
+margin_right = 969.0
+margin_bottom = 444.0
+custom_fonts/font = SubResource( 3 )
+text = "Jogo produzido por Davi Torres, Isaac Santos Romão e Isabella Crosariol para a disciplina Desenvolvimento de games, ministrada pelos professores Prof. Dr. Fábio Augusto Menocci Cappabianco e Profª. Dra. Vanessa Andrade Pereira.
+O jogo foi feito tendo como base o jogo \"PALAVRAS CRUZADAS\" criado pela Professora Rosemay Ribeiro e Professor Doutor José Silvério Edmundo Germano, disponível no site: http://www.fis.ita.br/libras/jogos/jogos.html
+Música: Quincas Moreira - Rainbow Forest
+Efeitos sonoros obtidos em:  https://www.zapsplat.com"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" parent="." instance=ExtResource( 5 )]
+onde_voltar = "res://TitleMenu.tscn"

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Rainbow-Forest-Quincas-Moreira.ogg-7713bd7450071e0596f45b0c0e39aeb5.oggstr"
+
+[deps]
+
+source_file="res://assets/Rainbow-Forest-Quincas-Moreira.ogg"
+dest_files=[ "res://.import/Rainbow-Forest-Quincas-Moreira.ogg-7713bd7450071e0596f45b0c0e39aeb5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
